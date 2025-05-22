@@ -12,6 +12,7 @@ body{
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -20,4 +21,9 @@ body{
     color: hsl(0, 0%, 98%);
     font-size: 18px;
     font-weight: 700;
+}
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
 }

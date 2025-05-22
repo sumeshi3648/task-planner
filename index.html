@@ -12,11 +12,25 @@
         <div class = "upper-todo">
             <div class = "todo-container">
                 <h1>TODO</h1>
-                <input type="text" placeholder="Currently typing" />
+                <div class = "one-checkbox">
+                    <input type="checkbox" id="current-task" />
+                    <label for="current-task">Current task...</label>
+                </div>
             </div>
             <div class = "tasks-list">
-                <input type="checkbox" id="task1">
-                <label for="task1">Jog around the park 3x</label>
+                <div class = "one-checkbox">
+                    <input type="checkbox" id="task1">
+                    <label for="task1">Jog around the park 3x</label>
+                </div>
+                <div class="one-checkbox">
+                    <input type="checkbox" id="task2">
+                    <label for="task1">Research Methods presentation</label>
+                </div>
+                <div class = "one-checkbox">
+                    <input type="checkbox" id="task3" name="task3" checked>
+                    <label for="task3">Final project</label>
+                </div>
+                
             </div>
         </div>
         
