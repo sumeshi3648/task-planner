@@ -18,17 +18,54 @@ body{
     gap: 20px;
 }
 
-.todo-container {
-    width: 400px;
+.logo {
+    display: flex;
+    flex-direction: row;
+    max-width: 500px;
+    width: 100%;
+    padding-top: 120px;
     color: hsl(0, 0%, 98%);
+    align-items: center;
+    justify-content: space-between;
 }
 
-.todo-container h1{
-    padding-top: 120px;
+.logo h1{
     font-weight: 700;
     font-size: 36px;
+    letter-spacing: 8px;
 }
 
+.theme-change {
+    cursor: pointer;
+}
+
+.theme-change img{
+    width: 36px;
+    height: 36px;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    background-color: #2a2a40;
+    color: hsl(0, 0%, 98%);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    gap: 16px;
+}
+
+.new-todo {
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    font-size: 16px;
+    background-color: #2a2a40;
+    color: hsl(0, 0%, 98%);
+    border-bottom: 1px solid rgb(105, 105, 105);
+}
+
+/*
 .tasks-list {
     width: 400px;
     display: flex;
@@ -41,4 +78,4 @@ body{
     background-color: rgb(80, 80, 114);
     color: hsl(0, 0%, 98%);
     
-}
+}*/
