@@ -15,15 +15,30 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .todo-container {
+    width: 400px;
     color: hsl(0, 0%, 98%);
-    font-size: 18px;
+}
+
+.todo-container h1{
+    padding-top: 120px;
     font-weight: 700;
+    font-size: 36px;
 }
 
 .tasks-list {
+    width: 400px;
     display: flex;
     flex-direction: column;
+    gap: 4px;
+}
+
+.one-checkbox {
+    padding: 16px 8px;
+    background-color: rgb(80, 80, 114);
+    color: hsl(0, 0%, 98%);
+    
 }
