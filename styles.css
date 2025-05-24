@@ -5,11 +5,6 @@ body{
     font-family: Josefin Sans;
 }
 
-.dark-mode {
-    background-color:rgb(46, 47, 58);
-
-}
-
 .upper-todo {
     max-width: 100%;
     height: 30vh;
@@ -91,7 +86,14 @@ body{
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgb(216, 216, 216);
-    
+}
+
+.todo-item img{
+    display: flex;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-left: auto;
 }
 
 .todo-item input[type="checkbox"] {
@@ -101,4 +103,21 @@ body{
 .todo-item.completed span {
     text-decoration: line-through;
     color: #888;
+}
+
+/*DARK MODE STYLES */
+
+.dark-mode {
+    background-color:rgb(19, 19, 19);
+}
+
+.dark-mode .new-todo {
+    color: hsl(0, 0%, 98%);
+    background-color: #2a2a40;
+    border-bottom: 1px solid rgb(22, 22, 22);
+}
+
+.dark-mode .todo-container {
+    color: hsl(0, 0%, 98%);
+    background-color: #2a2a40;
 }
