@@ -40,8 +40,8 @@ body{
 }
 
 .theme-change img{
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
 }
 
 .main-content {
@@ -88,10 +88,23 @@ body{
     border-bottom: 1px solid rgb(216, 216, 216);
 }
 
+.footer {
+    padding-inline: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    color:rgb(138, 138, 138);
+}
+.footer span {
+    cursor: pointer;
+}
+
 .todo-item img{
     display: flex;
-    width: 32px;
-    height: 32px;
+    width: 16px;
+    height: 16px;
     cursor: pointer;
     margin-left: auto;
 }
@@ -120,4 +133,9 @@ body{
 .dark-mode .todo-container {
     color: hsl(0, 0%, 98%);
     background-color: #2a2a40;
+    box-shadow: 0 5px 15px rgba(61, 61, 61, 0.3);
+}
+
+.dark-mode .todo-item {
+    border-bottom: 1px solid rgb(97, 97, 97);
 }

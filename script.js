@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         span.textContent = text;
 
         const img = document.createElement('img');
-        img.src = "assets/delete.png";
+        img.src = "assets/icon-cross.svg";
         img.alt = "Delete todo item";
         img.addEventListener('click', handleDeleteClick);
 
@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleTheme() {
         if (body.classList.contains('dark-mode')) {
             body.classList.remove('dark-mode')
-            themeToggleImg.src = 'assets/moon.png';
+            themeToggleImg.src = 'assets/icon-moon.svg';
             themeToggleImg.alt = 'toggle dark mode';
         } else {
             body.classList.add('dark-mode')
-            themeToggleImg.src = 'assets/sun.png';
+            themeToggleImg.src = 'assets/icon-sun.svg';
             themeToggleImg.alt = 'toggle light mode';
         }
     }
