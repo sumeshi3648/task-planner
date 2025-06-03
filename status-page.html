@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo Board</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f6fa;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background-color: #1e1e2f;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin-bottom: 15px;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .sidebar li:hover {
+      opacity: 1;
+    }
+
+    /* Main board */
+    .board {
+      flex: 1;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      overflow-x: auto;
+    }
+
+    .column {
+      flex: 1;
+      min-width: 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column h3 {
+      margin-bottom: 10px;
+    }
+
+    .task {
+      background-color: #fafafa;
+      border: 1px solid #e0e0e0;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: grab;
+    }
+
+    .task:active {
+      cursor: grabbing;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Projects</h2>
+    <ul>
+      <li>Dashboard</li>
+      <li>Design system</li>
+      <li>User flow</li>
+      <li>UX research</li>
+    </ul>
+  </div>
+
+  <div class="board">
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>To Do</h3>
+      <div class="task" draggable="true" ondragstart="drag(event)" id="task1">Design new UI</div>
+      <div class="task" draggable="true" ondragstart="drag(event)" id="task2">Create promotion post</div>
+    </div>
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>In Progress</h3>
+      <div class="task" draggable="true" ondragstart="drag(event)" id="task3">Wireframe for app</div>
+    </div>
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h3>Done</h3>
+      <div class="task" draggable="true" ondragstart="drag(event)" id="task4">Launch website</div>
+    </div>
+  </div>
+
+  <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      const data = ev.dataTransfer.getData("text");
+      const task = document.getElementById(data);
+      if (ev.target.classList.contains("column")) {
+        ev.target.appendChild(task);
+      } else if (ev.target.parentElement.classList.contains("column")) {
+        ev.target.parentElement.appendChild(task);
+      }
+    }
+  </script>
+</body>
+</html>
